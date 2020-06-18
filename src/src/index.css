@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  width: 45%;
+  font-size: 1.5rem;
+}
+
+strong {
+  color: #f00;
+}
+
+.waterfall-pic {
+  max-width: 100%;
+  border: 5px solid #fff;
+}
+
+button {
+  border: 0;
+  background-color: #f00;
+  color: #fff;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.waterfall {
+  text-align: left;
+  padding: 30px;
+}
