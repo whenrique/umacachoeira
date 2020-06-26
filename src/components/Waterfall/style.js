@@ -1,16 +1,6 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  box-sizing: border-box;
-}
+import styled from 'styled-components'
 
-body {
-  background-color: #000;
-  color: #fff;
-}
-
-.wrapper {
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,23 +9,27 @@ body {
   width: 100vw;
   margin: auto;
   text-align: center;
-}
+`
 
-h1 {
+export const Heading = styled.h1`
   width: 45%;
   font-size: 1.5rem;
-}
-
-strong {
+`
+export const Strong = styled.strong`
   color: #f00;
-}
+`
 
-.waterfall-pic {
+export const Waterfall = styled.div`
+  text-align: left;
+  padding: 30px;
+`
+
+export const WaterfallPic = styled.img`
   max-width: 100%;
   border: 5px solid #fff;
-}
+`
 
-button {
+export const Button = styled.button`
   border: 0;
   background-color: #f00;
   color: #fff;
@@ -46,9 +40,4 @@ button {
   cursor: pointer;
   border-radius: 4px;
   margin-top: 1rem;
-}
-
-.waterfall {
-  text-align: left;
-  padding: 30px;
-}
+`

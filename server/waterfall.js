@@ -1,3 +1,4 @@
+require('@babel/polyfill/noConflict')
 require('dotenv').config()
 const express = require('express')
 const serverless = require('serverless-http')
@@ -34,7 +35,5 @@ app.get('/.netlify/functions/waterfall', async (req, res) => {
     return error
   }
 })
-
-app.listen(3000, () => console.log('listen on port 3000'))
 
 module.exports.handler = serverless(app)

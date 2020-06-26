@@ -1,19 +1,20 @@
 import React from 'react'
+import * as s from './style'
 
 const Waterfall = ({ waterfall, updateWaterfall }) => {
   const { user, urls, exif, alt_description } = waterfall || {}
 
   return (
-    <div className="wrapper">
+    <s.Wrapper>
       {!waterfall && (
         <>
-          <h1>Às vezes você só quer clicar em <strong>OK</strong> em ver uma cachoeira.</h1>
-          <button onClick={updateWaterfall}>OK</button>
+          <s.Heading>Às vezes você só quer clicar em <s.Strong>OK</s.Strong> em ver uma cachoeira.</s.Heading>
+          <s.Button onClick={updateWaterfall}>OK</s.Button>
         </>
       )}
       {waterfall && (
-        <div className="waterfall">
-          <img src={urls.small} alt={alt_description} className="waterfall-pic" />
+        <s.Waterfall>
+          <s.WaterfallPic src={urls.small} alt={alt_description} />
           <div className="pic-info">
             <p>by: {user.name}</p>
             {user.instagram_username && (
@@ -32,9 +33,9 @@ const Waterfall = ({ waterfall, updateWaterfall }) => {
             <p>focal: {exif.focal_length}</p>
             <p>iso: {exif.iso}</p>
           </div>
-        </div>
+        </s.Waterfall>
       )}
-    </div>
+    </s.Wrapper>
   )
 }
 
