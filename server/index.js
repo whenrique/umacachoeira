@@ -1,5 +1,6 @@
-const express = require('express')
 require('dotenv').config()
+const express = require('express')
+const serverless = require('serverless-http')
 const axios = require('axios')
 const path = require('path')
 const cors = require('cors')
@@ -36,4 +37,6 @@ app.get('/waterfall', async (req, res) => {
   }
 })
 
-app.listen(process.env.PORT || 3001)
+app.listen(3000, () => console.log('listen on port 3000'))
+
+module.exports.handler = serverless(app)
