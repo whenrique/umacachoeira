@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const serverless = require('serverless-http')
 const axios = require('axios')
-const path = require('path')
 const cors = require('cors')
 const app = express()
 
@@ -11,9 +10,8 @@ const {
 } = process.env
 
 app.use(cors())
-app.use('/', express.static(path.resolve(__dirname, '..', 'build')))
 
-app.get('/waterfall', async (req, res) => {
+app.get('/.netlify/functions/waterfall', async (req, res) => {
   try {
     const { data, status } = await axios.get('https://api.unsplash.com/photos/random/?query=waterfall', {
       headers: {
