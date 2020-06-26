@@ -6,7 +6,7 @@ const App = () => {
   const [ waterfall, setWaterfall ] = useState(null)
 
   async function fetchWaterfall() {
-    const { data } = await axios('/cu')
+    const { data } = await axios('/waterfall')
     setWaterfall(data)
     return data
   }
