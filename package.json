@@ -1,0 +1,40 @@
+{
+  "name": "umacachoeira",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:whenrique/umacachoeira.git",
+  "author": "Weslley Cavalcante <whenriquerc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "backpack-core": "^0.8.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "node ./build/main.js",
+    "start:server": "backpack dev",
+    "start:dev": "react-scripts start",
+    "build:dev": "react-scripts build",
+    "build:server": "backpack build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

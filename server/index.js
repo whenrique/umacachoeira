@@ -5,10 +5,12 @@ const path = require('path')
 const cors = require('cors')
 const app = express()
 
-const { UNSPLASH_ACCESS_KEY: access_key } = process.env
+const { 
+  UNSPLASH_ACCESS_KEY: access_key
+} = process.env
 
 app.use(cors())
-app.use('/', express.static(path.resolve(__dirname, '..', 'src', 'build')))
+app.use('/', express.static(path.resolve(__dirname, '..', 'build')))
 
 app.get('/waterfall', async (req, res) => {
   try {
@@ -34,4 +36,4 @@ app.get('/waterfall', async (req, res) => {
   }
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3001)
