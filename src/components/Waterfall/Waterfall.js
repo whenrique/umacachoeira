@@ -8,7 +8,7 @@ const Waterfall = ({ waterfall, updateWaterfall }) => {
     <s.Wrapper>
       {!waterfall && (
         <>
-          <s.Heading>Às vezes você só quer clicar e <s.Strong>OK</s.Strong> em ver uma cachoeira.</s.Heading>
+          <s.Heading>Às vezes você só quer clicar em <s.Strong>OK</s.Strong> e ver uma cachoeira.</s.Heading>
           <s.Button onClick={updateWaterfall}>OK</s.Button>
         </>
       )}
